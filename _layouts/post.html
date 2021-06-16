@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<link rel="stylesheet"
+	href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+<script
+	src="{{ '/scripts/jquery-1.11.2.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+<script
+	src="{{ '/scripts/function.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+</head>
+<body>
+
+	{%- include header.html -%}
+
+	<div class="container">
+
+		{%- include leftBar.html -%}
+		<div class="content">{{content}}</div>
+		<div class="right-bar">
+			{%- unless page.sideBar == false -%}
+			<script
+				src="{{ '/scripts/title.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+			<div class="menu-container">
+				<label class="title">目录</label>
+				<nav class="post-toc">
+					<ul id="menu"></ul>
+				</nav>
+			</div>
+			{%- endunless -%}
+		</div>
+		<script>
+			
+		</script>
+	</div>
+
+	{%- include footer.html -%}
+
+</body>
+</html>

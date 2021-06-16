@@ -1,0 +1,266 @@
+@import "rouge-codestyle";
+@import "default_colors";
+
+$content-width: 1000px !default;
+$side-bar-width: 300px !default;
+
+body {
+	background-color: $dark-pink;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: $shelf;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left-bar {
+  min-width: $side-bar-width;
+  background: $sky;
+}
+
+/* Right-bar */
+.right-bar {
+  min-width: $side-bar-width;
+  background: $sky;
+}
+
+.content {
+  width: $content-width;
+  padding: 5px;
+  background: $paper;
+  overflow:hidden;
+}
+
+.menu-container {
+	position: fixed;
+	padding: 10px;
+	margin-top: 100px;
+	padding-top: 30px;
+	overflow: hidden;
+	border-radius: 4px;
+	background-color: $sky;
+	width: $side-bar-width - 20px;
+}
+
+.menu-container::before{
+  content: "";
+  top: 9px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  border-radius: 4px;
+  position: absolute;
+  border: 2px solid;
+  z-index: -2;
+}
+
+.menu-container::after{
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.menu-container > .title{
+  position: absolute;
+  font-size: 1rem;
+  top: 0px;
+  padding: 0 6px;
+  color: inherit;
+  background-color: $sky;
+  color: inherit;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu input[type="radio"] {
+  visibility: hidden;
+}
+
+#menu input[type="radio"]::before {
+  visibility: visible;
+  content: "";
+  animation: blink 1s infinite steps(1);
+}
+
+#menu input[type="radio"]:checked::before {
+  visibility: visible;
+  content: ">";
+}
+
+#menu a:visited { 
+font-size: 12px; 
+color: #000000; 
+text-decoration: none; 
+}
+
+.menu-index-h2 {
+  margin-left: 1em;
+}
+.menu-index-h3 {
+  margin-left: 2em;
+}
+.menu-index-h4 {
+  margin-left: 3em;
+}
+.menu-index-h5 {
+  margin-left: 4em;
+}
+.menu-index-h6 {
+  margin-left: 5em;
+}
+
+
+/* 博客内容 */
+p {
+  text-indent: 2em;
+}
+
+blockquote {
+    color: #aaa;
+    border-left: 2px solid #888;
+}
+
+.container img{
+	max-width: 90%;
+}
+
+
+/* 表格相关 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+td, th {
+  border: 1px solid #cbcbcb;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: .5em 1em;
+}
+
+thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+td {
+  background-color: transparent;
+}
+
+td {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+// 导航栏
+#header-bar {
+	color: $paper;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	display: flex;
+	max-width: $content-width + $side-bar-width / 2;
+	background-color: $dark-pink;
+}
+
+#header-bar .site-title {
+  flex: auto;
+  align-self: flex-start;
+}
+
+.site-title .button {
+  cursor: pointer;
+  outline: none;
+  padding: 12px 15px;
+  border: none;
+  position: relative;
+}
+.site-title .button::before,
+.site-title .button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid;
+  border-color: $pink;
+  box-sizing: content-box;
+}
+.site-title .button::before {
+  top: -4px;
+  left: 0;
+  border-left: 8px;
+  border-right: 8px;
+}
+.site-title .button::after {
+  top: 0;
+  left: -4px;
+  border-top: 8px;
+  border-bottom: 8px
+}
+
+.site-title .button {
+  font-size: 3em;
+  text-decoration:none;
+  background-color: $paper;
+  box-shadow: inset -8px -8px 0 0 #ADAFBC;
+}
+.site-title .button:hover {
+  background-color: #e7e7e7;
+  box-shadow: inset -8px -8px 0 0 #ADAFBC;
+}
+
+.site-title .button:active {
+  color: $pink;
+  background-color: #e7e7e7;
+  box-shadow: inset 8px 8px 0 0 #ADAFBC;
+}
+
+
+
+
+#header-bar .site-nav{
+	flex: auto;
+	flex-grow: 0;
+	align-self: flex-end;
+}
+
+#footer-bar {
+	color: $paper;
+	padding-top: 1px;
+	background-color: $dark-pink;
+}
+
+//友链相关
+.friend-link-list li img {
+	border: 0.125rem;
+}
+
+.friend-link-list li a {
+	color: wheat;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
