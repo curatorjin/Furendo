@@ -1,12 +1,19 @@
-title: Furendo
-description: Furendo is a theme for GitHub Pages.
+title: SiteTitle
+description: description for your site.
+signature: your signature.
+nick_name: your nick name
+nick_name_vcard: your nick name vcard.
+email: your email address
 show_downloads: true
-google_analytics:
 theme: furendo
-blogDir: blogs
-testArr:
-  - obj1
-  - obj2
-  - obj3
-  - obj4
-  - obj5
+tags: default
+paginate: 5
+paginate_path: "/page:num/"
+tag_page_layout: tag_page
+tag_page_dir: tag
+friends:
+    - name: 友链1
+      link: https://www.sample.com
+    - name: 友链2
+      link: https://www.sample.com
+    

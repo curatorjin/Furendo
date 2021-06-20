@@ -15,18 +15,33 @@
 	<div class="container">
 
 		{%- include leftBar.html -%}
-		<div class="content">{{content}}</div>
+		<div class="content">
+            {% if page.tags.size > 0 %}
+	            <div class="tag-cloud" style="margin-top:0px; padding: 0px">
+	            <span style="padding:10px; ">相关标签：</span>
+	            {% for tag in page.tags %}
+	                <a href="/tag/{{tag}}">{{tag}}</a>
+	            {% endfor %}
+	            </div>
+            {% endif %}
+            {{content}}
+        </div>
 		<div class="right-bar">
-			{%- unless page.sideBar == false -%}
-			<script
-				src="{{ '/assets/scripts/title.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-			<div class="menu-container">
-				<label class="title">目录</label>
-				<nav class="post-toc">
-					<ul id="menu"></ul>
-				</nav>
-			</div>
-			{%- endunless -%}
+            <div class="post-right">
+				{%- unless page.sideBar == false -%}
+				<script
+					src="{{ '/assets/scripts/title.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+				<div class="menu-container">
+					<label class="title">目录</label>
+					<nav class="post-toc">
+						<ul id="menu"></ul>
+					</nav>
+				</div>
+				{%- endunless -%}
+				<div class="tag-cloud">
+	                {{ site | tag_cloud }}
+	            </div>
+            </div>
 		</div>
 		<script>
 			
