@@ -61,7 +61,12 @@
 
 		<div class="right-bar">
             <div class="tag-cloud">
-                {{ site | tag_cloud }}
+                {% assign all_tags = site.pages | map: "tag" %}
+                {% for item in all_tags %}
+	                {% if item %}
+					    <a href="{{site.baseurl}}/tag/{{item | downcase}}">{{item}}</a>
+					{% endif %}
+				{% endfor %}
             </div>
 		</div>
 	</div>

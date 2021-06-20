@@ -5,7 +5,7 @@ nick_name: your nick name
 nick_name_vcard: your nick name vcard.
 email: your email address
 show_downloads: true
-baseurl: "/"
+baseurl: ""
 theme: furendo
 tags: default
 paginate: 5
