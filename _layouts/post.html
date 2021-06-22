@@ -21,7 +21,7 @@
 	            <div class="tag-cloud" style="margin-top:0px; padding: 0px">
 	            <span style="padding:10px; ">相关标签：</span>
 	            {% for tag in page.tags %}
-	                <a href="{{site.baseurl}}/tag/{{tag | downcase}}">{{tag}}</a>
+	                <a href="{{site.baseurl}}/tag/tag-detail?tag={{tag | downcase}}">{{tag}}</a>
 	            {% endfor %}
 	            </div>
             {% endif %}
@@ -42,7 +42,7 @@
 				<div class="tag-cloud">
 				    {% assign all_tags = site.posts | map: "tags" | uniq %}
 					{% for tag in all_tags %}
-						<a href="{{site.baseurl}}/tag/{{tag | downcase}}">{{tag}}</a>
+						<a href="{{site.baseurl}}/tag/tag-detail?tag={{tag | downcase}}">{{tag}}</a>
 					{% endfor %}
 	            </div>
             </div>

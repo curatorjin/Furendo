@@ -63,7 +63,7 @@
             <div class="tag-cloud">
                 {% assign all_tags = site.posts | map: "tags" | uniq %}
 				{% for tag in all_tags %}
-					<a href="{{site.baseurl}}/tag/{{tag | downcase}}">{{tag}}</a>
+					<a href="{{site.baseurl}}/tag/tag-detail?tag={{tag | downcase}}">{{tag}}</a>
 				{% endfor %}
             </div>
 		</div>

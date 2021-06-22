@@ -7,11 +7,8 @@ email: your email address
 show_downloads: true
 baseurl: "/blog"
 theme: furendo
-tags: default
 paginate: 5
 paginate_path: "/page:num/"
-tag_page_layout: tag_page
-tag_page_dir: tag
 friends:
     - name: 友链1
       link: https://www.sample.com
