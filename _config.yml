@@ -9,9 +9,11 @@ baseurl: "/blog"
 theme: furendo
 paginate: 5
 paginate_path: "/page:num/"
+kramdown:
+  input: GFM
 friends:
-    - name: 友链1
-      link: https://www.sample.com
-    - name: 友链2
-      link: https://www.sample.com
+  - name: 友链1
+    link: https://www.sample.com
+  - name: 友链2
+    link: https://www.sample.com
     

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
-<head>
-<link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet"
-	href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-<script
-	src="{{ '/assets/scripts/jquery-1.11.2.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-<script
-	src="{{ '/assets/scripts/function.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-</head>
+{%- include head.html -%}
 <body>
 
 	{%- include header.html -%}
