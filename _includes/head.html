@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 <head>
+{% if page.title %}
 <title>{{page.title}}</title>
+{% else %}
+<title>{{site.title}}</title>
+{% endif %}
 <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet"
     href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
